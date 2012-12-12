@@ -1,3 +1,5 @@
 *.cache
 
 *.cache
+MAS\MAS\obj\Debug*/
+MAS*/
