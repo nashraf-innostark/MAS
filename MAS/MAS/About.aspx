@@ -5,7 +5,7 @@
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <h2>
-        About asdlf asdfasd f;asd fasdf 
+        About
     </h2>
     <p>
         Put content here.
