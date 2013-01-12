@@ -41,6 +41,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MAS.BusinessObject\MAS.BusinessObject.csproj">
+      <Project>{162FBF59-04B3-4F67-8E65-45907A8E2A5D}</Project>
+      <Name>MAS.BusinessObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MAS.DAL\MAS.DAL.csproj">
+      <Project>{99A14964-8F14-4EF0-97E4-A92D9B894061}</Project>
+      <Name>MAS.DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
