@@ -5,6 +5,9 @@
 <head id="Head1" runat="server">
     <title></title>
     <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <script language="javascript" src="Scripts/jquery-1.8.3.js" type="text/javascript"></script>
+    <script language="javascript" src="Scripts/RSA.min.js" type="text/javascript"></script>
+    <%--<script language="javascript" src="Scripts/RSA.js" type="text/javascript"></script>--%>
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -19,7 +22,9 @@
             </div>
             <div class="loginDisplay">
                 <asp:Label ID="lblusername" runat="server" Text="Welcome User Name"></asp:Label>
-                <a href="#" id="lnklogin" runat="server">Log In</a> <a href="#" id="lnkchangepassword"
+                <a href="#login-box" class="login-window">Sign In</a>
+                  <asp:TextBox runat="server" ID="txtKey" Style="display: none" /> 
+                 <a href="#" id="lnkchangepassword"
                     runat="server">Change Password</a>
             </div>
             <div class="clear hideSkiplink">
@@ -52,10 +57,128 @@
             <div class="rightcol">
                 RSS Feeds</div>
         </div>
+        
+    
+        
         <div class="clear">
         </div>
         <div class="footer">
         </div>
+
+        </div>
     </form>
+    <div id="login-box" class="login-popup">
+        <a href="#" class="close"><img src="Images/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
+          <form method="post" class="signin" action="#">
+                <fieldset class="textbox">
+            	<label class="username">
+                <span>Username or email</span>
+                <input id="username" name="username" value="" type="text" autocomplete="on" placeholder="Username">
+                </label>
+                <label class="password">
+                <span>Password</span>
+                <input id="password" name="password" value="" type="password" placeholder="Password">
+                </label>
+                <button class="submit button" type="button" onclick="validateUser();">Sign in</button>
+                <p>   
+                <a class="forgot" href="#">Forgot your password?</a>
+                </p>        
+                </fieldset>
+          </form>
+        </div>
+    <script language="javascript" type="text/javascript">
+
+        $(document).ready(function () {
+            $('a.login-window').click(function () {
+
+                //Getting the variable's value from a link 
+                var loginBox = $(this).attr('href');
+
+                //Fade in the Popup
+                $(loginBox).fadeIn(300);
+
+                //Set the center alignment padding + border see css style
+                var popMargTop = ($(loginBox).height() + 24) / 2;
+                var popMargLeft = ($(loginBox).width() + 24) / 2;
+
+                $(loginBox).css({
+                    'margin-top': -popMargTop,
+                    'margin-left': -popMargLeft
+                });
+
+                // Add the mask to body
+                $('body').append('<div id="mask"></div>');
+                $('#mask').fadeIn(300);
+
+                return false;
+            });
+
+            // When clicking on the button close or the mask layer the popup closed
+            $('a.close, #mask').live('click', function () {
+                $('#mask , .login-popup').fadeOut(300, function () {
+                    $('#mask').remove();
+                });
+                return false;
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        function CheckEnter(e) {
+            if (!e) e = window.event;
+            var key = e.keyCode ? e.keyCode : e.which;
+            if (key == 13) {
+                e.returnValue = false;
+                if (window.event)
+                    window.event.keyCode = 0;
+                $('#loginButton').click();
+            }
+        }
+        function validateUser() {
+            var pkey = $('#<%=txtKey.ClientID %>').val().split(',');
+            var rsa = new RSAKey();
+            rsa.setPublic(pkey[1], pkey[0]);
+            var username = rsa.encrypt($('#username').val());
+            var pass = rsa.encrypt($('#password').val());
+            $('.FailureText').css('color', 'blue');
+            $('.FailureText div').text('Checking User/Pass....');
+            $.ajax({
+                type: "POST",
+                url: "Services/LoginService.asmx/ValidateUser",
+                data: "{'encUsername':'" + username + "','encPassword':'" + pass + "','rememberMe':'" + false + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data, status) { OnSuccessLogin(data, status); },
+                error: OnErrorLogin
+            });
+        }
+        function OnSuccessLogin(data, status) {
+
+            if (data.d) {
+                $('#FailureText').css('color', 'green');
+                $('#FailureText div').text('Authentication was successfull. you will redirect to previous page');
+                var firstPage = getParameterByName("ReturnUrl");
+                if (firstPage)
+                    window.location.href = firstPage;
+            }
+            else {
+                $('#FailureText').css('color', 'red');
+                $('#FailureText div').text('username / password is invalid');
+            }
+        }
+        function OnErrorLogin(request, status, error) {
+            $('.FailureText div').text('There is an error in aythenticating process');
+        }
+        function getParameterByName(name) {
+            name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+            var regexS = "[\\?&]" + name + "=([^&#]*)";
+            var regex = new RegExp(regexS);
+            var results = regex.exec(window.location.href);
+            if (results == null)
+                return "";
+            else
+                return decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+
+	</script>
 </body>
 </html>

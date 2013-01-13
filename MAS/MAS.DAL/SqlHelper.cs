@@ -7,7 +7,7 @@ namespace MAS.DAL
     {
         public static SqlConnection GetConnection()
         {
-            string conString = ConfigurationManager.ConnectionStrings["ProjConString"].ConnectionString;
+            string conString = ConfigurationManager.ConnectionStrings["MASConnectionString"].ConnectionString;
             return new SqlConnection(conString);
         }
     }

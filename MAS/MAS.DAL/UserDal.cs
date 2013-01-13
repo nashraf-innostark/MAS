@@ -18,7 +18,7 @@ namespace MAS.DAL
 
         public User VerifyCredentials(string userName, string password)
         {
-            const string query = @"select * from SystemUser where UserName='@username' and UserPassword='@password'";
+            const string query = @"select * from SystemUser where UserName like @username and UserPassword=@password";
             SqlConnection con = SqlHelper.GetConnection();
             SqlCommand cmdVerfiyCredentials = new SqlCommand(query, con);
             cmdVerfiyCredentials.Parameters.AddWithValue("@username", userName);

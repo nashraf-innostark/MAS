@@ -11,7 +11,14 @@ namespace MAS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Request.IsAuthenticated)
+            {
+                
+            }
+            else
+            {
+                throw new NotImplementedException();
+            }
         }
     }
 }
