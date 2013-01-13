@@ -2,50 +2,60 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-<head runat="server">
+<head id="Head1" runat="server">
     <title></title>
     <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form runat="server">
+    <form id="Form1" runat="server">
     <div class="page">
         <div class="header">
             <div class="title">
                 <h1>
-                    My ASP.NET Application
+                    Medical Appointment System
                 </h1>
             </div>
             <div class="loginDisplay">
-                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
-                    <AnonymousTemplate>
-                        [ <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Log In</a> ]
-                    </AnonymousTemplate>
-                    <LoggedInTemplate>
-                        Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
-                        [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/"/> ]
-                    </LoggedInTemplate>
-                </asp:LoginView>
+                <asp:Label ID="lblusername" runat="server" Text="Welcome User Name"></asp:Label>
+                <a href="#" id="lnklogin" runat="server">Log In</a> <a href="#" id="lnkchangepassword"
+                    runat="server">Change Password</a>
             </div>
             <div class="clear hideSkiplink">
-                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
-                    <Items>
-                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
-                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="About"/>
-                    </Items>
-                </asp:Menu>
+                <h2>
+                    <asp:Label ID="lblpagetitle" runat="server" Text="Page Title"></asp:Label>
+                </h2>
             </div>
         </div>
         <div class="main">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+            <div class="leftCol">
+                <div id="patientmenu">
+                    Patient Menu<br />
+                    <a href="#" id="A1" runat="server">Edit Info</a><br />
+                    <a href="#" id="A2" runat="server">View/Create Appointments</a><br />
+                    <a href="#" id="A3" runat="server">View History</a><br />
+                    <a href="#" id="A4" runat="server">Post/Follow Query</a></div>
+                <div id="clinicmenu">
+                    Clinic Menu<br />
+                    <a href="#" id="A5" runat="server">Register Patient</a><br />
+                    <a href="#" id="A6" runat="server">Create Appointment</a><br />
+                    <a href="#" id="A7" runat="server">Appointment List/Check Up</a><br />
+                    <a href="#" id="A8" runat="server">Medicine Approval</a><br />
+                    <a href="#" id="A9" runat="server">Answer Queries</a><br />
+                    <a href="#" id="A10" runat="server">Add Holidays</a><br />
+                    <a href="#" id="A11" runat="server">Add Doctor Timings</a></div>
+            </div>
+            <div class="middlecol">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            </div>
+            <div class="rightcol">
+                RSS Feeds</div>
         </div>
         <div class="clear">
         </div>
-    </div>
-    <div class="footer">
-        
-    </div>
+        <div class="footer">
+        </div>
     </form>
 </body>
 </html>
