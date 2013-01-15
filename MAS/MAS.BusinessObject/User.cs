@@ -22,6 +22,7 @@ namespace MAS.BusinessObject
         public String Email { get; set; }
         public String Speciality { get; set; }
         public bool IsLocked { get; set; }
+        public short RoleKey { get; set; }
         public bool IsDeleted { get; set; }
         public bool IsPrivate { get; set; }
         public DateTime RecCreatedDate { get; set; }

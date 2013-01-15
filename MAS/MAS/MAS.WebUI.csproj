@@ -58,9 +58,14 @@
     <Content Include="Account\Register.aspx" />
     <Content Include="App_Data\AESKey.txt" />
     <Content Include="Images\close_pop.png" />
+    <Content Include="PatientView.aspx" />
+    <Content Include="PhysicianView.aspx" />
     <Content Include="Scripts\jquery-1.8.3-vsdoc.js" />
     <Content Include="Scripts\jquery-1.8.3.js" />
     <Content Include="Scripts\jquery-1.8.3.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\RSA.js" />
     <Content Include="Scripts\RSA.min.js" />
     <Content Include="Services\LoginService.asmx" />
@@ -121,6 +126,20 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="PatientView.aspx.cs">
+      <DependentUpon>PatientView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PatientView.aspx.designer.cs">
+      <DependentUpon>PatientView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PhysicianView.aspx.cs">
+      <DependentUpon>PhysicianView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PhysicianView.aspx.designer.cs">
+      <DependentUpon>PhysicianView.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\LoginService.asmx.cs">
       <DependentUpon>LoginService.asmx</DependentUpon>
@@ -134,6 +153,7 @@
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
     <Compile Include="Utility\ActionValidator.cs" />
+    <Compile Include="Utility\LoginInfo.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

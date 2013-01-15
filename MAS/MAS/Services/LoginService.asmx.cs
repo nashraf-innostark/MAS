@@ -1,12 +1,16 @@
 ﻿using System;
 using System.IO;
 using System.Web;
+using System.Web.Script.Serialization;
 using System.Web.Services;
 using System.Web.Security;
 using System.Security.Cryptography;
 using System.Text;
 using MAS.BusinessObject;
+using System.Linq;
+using System.Linq.Expressions;
 using MAS.Controller;
+using MAS.Utility;
 
 namespace MAS.Services
 {
@@ -69,11 +73,11 @@ namespace MAS.Services
         /// <returns></returns>
         /// <remarks></remarks>
         [WebMethod(EnableSession = true)]
-        public bool ValidateUser(string encUsername, string encPassword, bool rememberMe)
+        public string ValidateUser(string encUsername, string encPassword, bool rememberMe)
         {
             // Check request number from this ip is in allowed range
             if (!ActionValidator.IsValid(ActionValidator.ActionTypeEnum.FirstVisit))
-                return false;
+                return String.Empty;
 
             //read Key Pair (Public + Private Key) from Cache
             string domainKey = (string)HttpRuntime.Cache["KeyPair"];
@@ -82,14 +86,18 @@ namespace MAS.Services
             rsa.FromXmlString(domainKey);
             string username = Encoding.UTF8.GetString(rsa.Decrypt(ToHexByte(encUsername), false));
             string password = Encoding.UTF8.GetString(rsa.Decrypt(ToHexByte(encPassword), false));
-             User  user = new UserController().VerifyUser(username, password);
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) )
+            {
+                return String.Empty;
+            }
+            User  user = new UserController().VerifyUser(username, password);
             if (user.UserId > 0)
             {
 
                 // Query the user store to get this user's User Data
 
                 string userDataString = user.UserId + "|" + user.UserName + "|" + user.FirstName + " " + user.LastName +
-                                        "|" + user.RoleId;
+                                        "|" + user.RoleId+"|"+user.SocialSecurityNo+"|"+user.RoleKey;
 
                 // Create the cookie that contains the forms authentication ticket
 
@@ -111,9 +119,33 @@ namespace MAS.Services
 
                 // Manually add the authCookie to the Cookies collection
                 HttpContext.Current.Response.Cookies.Add(authCookie);
-                return true;
+                JavaScriptSerializer serializer = new JavaScriptSerializer();
+                LoginInfo info = new LoginInfo {Id = user.UserId, RId = user.RoleKey};
+                return serializer.Serialize(info);
+                
             }
-            return false;
+            return String.Empty;
+        }
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="encCurrent"></param>
+        /// <param name="encNew"></param>
+        /// <returns></returns>
+        [WebMethod(EnableSession = true)]
+        public bool ChangePassword(string encCurrent,string encNew )
+        {
+            if (HttpContext.Current.Request.IsAuthenticated)
+            {
+
+                return false;
+            }
+            else
+            {
+                return false;
+            }
+            
         }
 
         public static string ToHexString(byte[] byteValue)

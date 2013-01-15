@@ -49,6 +49,15 @@ namespace MAS {
         protected global::System.Web.UI.WebControls.Label lblusername;
         
         /// <summary>
+        /// lbLogout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbLogout;
+        
+        /// <summary>
         /// txtKey control.
         /// </summary>
         /// <remarks>
@@ -56,15 +65,6 @@ namespace MAS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtKey;
-        
-        /// <summary>
-        /// lnkchangepassword control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor lnkchangepassword;
         
         /// <summary>
         /// lblpagetitle control.

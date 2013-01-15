@@ -18,7 +18,7 @@ namespace MAS.DAL
 
         public User VerifyCredentials(string userName, string password)
         {
-            const string query = @"select * from SystemUser where UserName like @username and UserPassword=@password";
+            const string query = @"select * from SystemUser SU inner join Role R on R.RoleId= SU.RoleId where SU.SocialSecurityNo like @username and SU.UserPassword=@password and SU.IsLocked=0";
             SqlConnection con = SqlHelper.GetConnection();
             SqlCommand cmdVerfiyCredentials = new SqlCommand(query, con);
             cmdVerfiyCredentials.Parameters.AddWithValue("@username", userName);
@@ -43,7 +43,8 @@ namespace MAS.DAL
                             result.RoleId = Convert.ToInt32(drUser["RoleId"]);
                             result.FirstName = Convert.ToString(drUser["FirstName"]);
                             result.LastName = Convert.ToString(drUser["LastName"]);
-                           
+                            result.SocialSecurityNo = Convert.ToString(drUser["SocialSecurityNo"]);
+                            result.RoleKey = Convert.ToInt16(drUser["RoleKey"]);
                         }
                     }
                 }
