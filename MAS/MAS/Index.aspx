@@ -79,13 +79,28 @@
 	                        </div>
 		
 	        <!--.primary-->
-	        <div class="header-top">
+	       <form  runat="server" > 
+           <div class="header-top">
 	         <div id="top-search">
-	           <form method="get" >
+	          
 	              <label>search</label><span class="input-search"><input type="text" name="s"></span><input type="submit" value="" id="submit">
-                </form>
+               
 	           </div>
 		   		   </div>
+                    <div class="loginDisplay">
+                    <% if (Request.IsAuthenticated)
+                       { %>
+                        <asp:Label ID="lblusername" runat="server" Text="Welcome"></asp:Label>
+                        
+                        <asp:LinkButton runat="server" ID="lbLogout" Text="Logout" ></asp:LinkButton>
+                     <% }
+                       else
+                       { %>
+                       <a href="#login-box" class="login-window">Sign In</a>
+                       <asp:TextBox runat="server" ID="txtKey" Style="display: none" /> 
+                    <%} %>
+            </div>
+                </form>
 		   <!--.container-->
           </header>
             </div>
@@ -288,9 +303,9 @@
 	</footer>
     </div>
     <!--#main-->
-   <%-- <script type="text/javascript" src="./ABCLOGIC_files/jquery.form.js"></script>
+    <%-- <script type="text/javascript" src="./ABCLOGIC_files/jquery.form.js"></script>
     <script type="text/javascript" src="./ABCLOGIC_files/scripts.js"></script>
-   --%> 
+    --%>
     <!-- this is used by many Wordpress features and for plugins to work proporly -->
     <!-- Show Google Analytics -->
     <div id="LCS_336D0C35_8A85_403a_B9D2_65C292C39087_communicationDiv">

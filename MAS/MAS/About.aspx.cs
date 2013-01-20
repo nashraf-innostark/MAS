@@ -12,16 +12,16 @@ namespace MAS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.IsAuthenticated)
-            {
-                var identity=((FormsIdentity) HttpContext.Current.User.Identity);
-                var str= identity.Ticket.UserData;
-                var result=str.Split('|');
-            }
-            else
-            {
-                throw new NotImplementedException();
-            }
+            //if (Request.IsAuthenticated)
+            //{
+            //    var identity=((FormsIdentity) HttpContext.Current.User.Identity);
+            //    var str= identity.Ticket.UserData;
+            //    var result=str.Split('|');
+            //}
+            //else
+            //{
+            //    throw new NotImplementedException();
+            //}
         }
     }
 }

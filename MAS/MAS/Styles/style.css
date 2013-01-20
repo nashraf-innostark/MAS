@@ -328,7 +328,7 @@ body{
 /* main box */
 .main-box { overflow:hidden;}
 	.main-box .main-box-top { 
-		height:141px;
+		height:125px;
 		background:url(/Images/main-box-top.png) no-repeat left top;
 	}
 	.main-box .main-box-bot {
@@ -341,7 +341,7 @@ body{
 		width:100%;
 		overflow:hidden;
 	}
-	.main-box .main-box-inner { padding:12px 20px 0 20px;}
+	.main-box .main-box-inner { padding:5px 20px 0 20px;}
 
 
 
@@ -349,7 +349,7 @@ body{
 /* Header
 ---------------------------------------- */
 #header {
-	height:141px;
+	height:125px;
 	position:relative;
 	z-index:99;
 }
@@ -364,7 +364,7 @@ body{
 .logo {
 	position:absolute;
 	left:25px;
-	top:73px;
+	top:65px;
 	}
 	.logo h1,
 	.logo h2 {
@@ -828,8 +828,12 @@ li.sfHover > a > .sf-sub-indicator {
 	float:left;
 	width:500px;	
 }
+#mastercontent {
+	float:left;
+	width:705px;	
+}
 	#content .inside {
-		padding:25px 0 63px 0;
+		padding:15px 0 63px 0;
 		}
 
 #full-width #content {
@@ -2077,3 +2081,16 @@ input, select, textarea {
 }
 
 /* Always remember to compress your live stylesheet and keep an uncompressed backup */
+
+.loginDisplay {
+    color:Black;
+    display: block;
+    float: right;
+    font-size: 1.1em;
+    margin-right: 20px;
+    margin-top: 65px;
+    padding: 14px;
+    text-align: right;
+    width: 200px;
+}
+
