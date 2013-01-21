@@ -155,6 +155,9 @@
                         <div class="wrapper">
                             <div id="mastercontent">
                                 <div class="inside">
+                                    <div class="pagetitle">
+                                        <asp:Label runat="server" ID="lblpageTitle" Text="Page Title"></asp:Label>
+                                    </div>
                                     <asp:ContentPlaceHolder ID="BodyContent" runat="server">
                                     </asp:ContentPlaceHolder>
                                 </div>
