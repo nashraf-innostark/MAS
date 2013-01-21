@@ -58,6 +58,7 @@
     <Content Include="Account\Register.aspx" />
     <Content Include="App_Data\AESKey.txt" />
     <Content Include="Images\close_pop.png" />
+    <Content Include="PatientProfile.aspx" />
     <Content Include="PatientView.aspx" />
     <Content Include="PhysicianView.aspx" />
     <Content Include="Scripts\jquery-1.8.3-vsdoc.js" />
@@ -125,6 +126,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="PatientProfile.aspx.cs">
+      <DependentUpon>PatientProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PatientProfile.aspx.designer.cs">
+      <DependentUpon>PatientProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="PatientView.aspx.cs">
       <DependentUpon>PatientView.aspx</DependentUpon>
