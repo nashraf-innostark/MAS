@@ -10,69 +10,78 @@
 namespace MAS {
     
     
-    public partial class MasterPage {
+    public partial class NewQuestion {
         
         /// <summary>
-        /// ltrlpageTitle control.
+        /// lblsubject control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ltrlpageTitle;
+        protected global::System.Web.UI.WebControls.Label lblsubject;
         
         /// <summary>
-        /// HeadContent control.
+        /// txtbxsubject control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder HeadContent;
+        protected global::System.Web.UI.WebControls.TextBox txtbxsubject;
         
         /// <summary>
-        /// lblusername control.
+        /// subjectRequiredFieldValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblusername;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator subjectRequiredFieldValidator;
         
         /// <summary>
-        /// lbLogout control.
+        /// lblquestion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbLogout;
+        protected global::System.Web.UI.WebControls.Label lblquestion;
         
         /// <summary>
-        /// txtKey control.
+        /// txtareaquestion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtKey;
+        protected global::System.Web.UI.WebControls.TextBox txtareaquestion;
         
         /// <summary>
-        /// lblpageheader control.
+        /// questionRequiredFieldValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblpageheader;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator questionRequiredFieldValidator;
         
         /// <summary>
-        /// BodyContent control.
+        /// btnCancel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder BodyContent;
+        protected global::System.Web.UI.WebControls.Button btnCancel;
+        
+        /// <summary>
+        /// btnSend control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSend;
     }
 }

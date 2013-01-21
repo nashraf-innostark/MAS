@@ -830,9 +830,76 @@ li.sfHover > a > .sf-sub-indicator {
 }
 #mastercontent {
 	float:left;
-	width:705px;	
+	width:715px;	
 }
-	#content .inside {
+.pagetitle
+{
+  line-height:20px;
+  background:#FBF1D8;
+  	border-radius:10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;	
+	color: black;
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 1.2em;
+    padding:5px 15px;
+    margin-bottom:20px;
+}
+.btnstyle
+{
+    background: none repeat scroll 0 0 #8BA43E;
+    border-radius: 8px 8px 8px 8px;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 7px 10px;
+    text-align: center;
+    text-decoration: none;	
+}
+.floatright
+{
+	float:right;	
+}
+.floatleft
+{
+	float:left;
+}
+.lblstyle
+{
+	padding:10px;
+}
+.longtxtbxstyle
+{
+	width:350px;
+}
+.txtxstyle
+{
+	width:150px;
+}
+.txtareastyle
+{
+	width:350px;
+	height:130px;
+}
+.lbldiv
+{
+	width:100px;
+	padding: 5px 0px;
+}
+.padding10
+{
+	padding:10px;	
+}
+.margin10
+{
+	margin:10px;	
+}
+.marginleft50
+{
+	margin-left:50px;	
+}
+#content .inside {
 		padding:15px 0 63px 0;
 		}
 
@@ -1360,11 +1427,11 @@ nav.oldernewer {
 	background:#fbf1d8;
 	position:relative;
 	
-	border-radius:20px;
-	-moz-border-radius:20px;
-	-webkit-border-radius:20px;	
+	border-radius:10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;	
 }
-#sidebar-right { margin:0 0 0 26px;}
+#sidebar-right { margin:0 0 0 17px;}
 
 #sidebar .inside,
 #sidebar-right .inside { padding:25px 21px;}

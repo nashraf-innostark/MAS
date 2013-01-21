@@ -10,25 +10,25 @@
 namespace MAS {
     
     
-    public partial class MasterPage {
+    public partial class FollowQuestion {
         
         /// <summary>
-        /// ltrlpageTitle control.
+        /// lblsubject control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ltrlpageTitle;
+        protected global::System.Web.UI.WebControls.Label lblsubject;
         
         /// <summary>
-        /// HeadContent control.
+        /// txtbxsubject control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder HeadContent;
+        protected global::System.Web.UI.WebControls.TextBox txtbxsubject;
         
         /// <summary>
         /// lblusername control.
@@ -40,39 +40,30 @@ namespace MAS {
         protected global::System.Web.UI.WebControls.Label lblusername;
         
         /// <summary>
-        /// lbLogout control.
+        /// txtareaquestion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbLogout;
+        protected global::System.Web.UI.WebControls.TextBox txtareaquestion;
         
         /// <summary>
-        /// txtKey control.
+        /// btnCancel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtKey;
+        protected global::System.Web.UI.WebControls.Button btnCancel;
         
         /// <summary>
-        /// lblpageheader control.
+        /// btnSend control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblpageheader;
-        
-        /// <summary>
-        /// BodyContent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder BodyContent;
+        protected global::System.Web.UI.WebControls.Button btnSend;
     }
 }

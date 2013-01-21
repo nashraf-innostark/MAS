@@ -6,7 +6,7 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>
-        <asp:Literal ID="pageTitle" Text="Title" runat="server"></asp:Literal></title>
+        <asp:Literal ID="ltrlpageTitle" Text="Title" runat="server"></asp:Literal></title>
     <meta name="keywords" content=" , MAS , ">
     <meta name="description" content=" | ">
     <meta charset="UTF-8">
@@ -78,6 +78,7 @@
     <div id="main">
         <!-- this encompasses the entire Web site -->
         <div class="main-box container">
+            <form runat="server">
             <div class="main-box-top">
                 <header id="header">
 	        <div class="logo">
@@ -86,7 +87,7 @@
 		
 	        <!--.primary-->
 	       
-	         <form runat="server" > 
+	        
              <div class="header-top"> <div id="top-search">
 	          
 	              <label>search</label><span class="input-search"><input type="text" name="s"></span><input type="submit" value="" id="submit">
@@ -105,7 +106,7 @@
                        <a href="#login-box" class="login-window">Sign In</a>
                        <asp:TextBox runat="server" ID="txtKey" Style="display: none" /> 
                     <%} %>
-            </div></form>
+            </div>
 		   <!--.container-->
           </header>
             </div>
@@ -155,6 +156,9 @@
                         <div class="wrapper">
                             <div id="mastercontent">
                                 <div class="inside">
+                                    <div class="pagetitle">
+                                        <asp:Label runat="server" ID="lblpageheader" Text="Page Title"></asp:Label>
+                                    </div>
                                     <asp:ContentPlaceHolder ID="BodyContent" runat="server">
                                     </asp:ContentPlaceHolder>
                                 </div>
@@ -199,6 +203,7 @@
             <!--.primary_content_wrap-->
             <div class="main-box-bot">
             </div>
+            </form>
         </div>
         <!--.main-box-->
         <footer id="footer">
