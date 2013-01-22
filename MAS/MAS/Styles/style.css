@@ -840,6 +840,7 @@ li.sfHover > a > .sf-sub-indicator {
 	-moz-border-radius:10px;
 	-webkit-border-radius:10px;	
 	color: black;
+<<<<<<< HEAD
     font-size: 22px;
     font-weight: normal;
     line-height: 1.2em;
@@ -898,6 +899,12 @@ li.sfHover > a > .sf-sub-indicator {
 .marginleft50
 {
 	margin-left:50px;	
+=======
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 1.2em;
+    padding:5px 15px;
+>>>>>>> 9ff15ba212fd40473ce1190608860d9a030073f0
 }
 #content .inside {
 		padding:15px 0 63px 0;

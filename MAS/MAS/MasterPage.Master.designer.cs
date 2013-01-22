@@ -58,13 +58,21 @@ namespace MAS {
         protected global::System.Web.UI.WebControls.TextBox txtKey;
         
         /// <summary>
+<<<<<<< HEAD
         /// lblpageheader control.
+=======
+        /// lblpageTitle control.
+>>>>>>> 9ff15ba212fd40473ce1190608860d9a030073f0
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
+<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Label lblpageheader;
+=======
+        protected global::System.Web.UI.WebControls.Label lblpageTitle;
+>>>>>>> 9ff15ba212fd40473ce1190608860d9a030073f0
         
         /// <summary>
         /// BodyContent control.
