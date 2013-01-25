@@ -2,7 +2,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="BodyContent" runat="server">
-<<<<<<< HEAD
     <div class="marginleft50">
     <div>
         <div class="lbldiv floatleft">
@@ -24,7 +23,4 @@
             Text="Send" onclick="btnSend_Click" />
     </div>
     </div>
-
-=======
->>>>>>> 9ff15ba212fd40473ce1190608860d9a030073f0
 </asp:Content>

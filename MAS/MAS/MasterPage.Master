@@ -157,11 +157,8 @@
                             <div id="mastercontent">
                                 <div class="inside">
                                     <div class="pagetitle">
-<<<<<<< HEAD
                                         <asp:Label runat="server" ID="lblpageheader" Text="Page Title"></asp:Label>
-=======
                                         <asp:Label runat="server" ID="lblpageTitle" Text="Page Title"></asp:Label>
->>>>>>> 9ff15ba212fd40473ce1190608860d9a030073f0
                                     </div>
                                     <asp:ContentPlaceHolder ID="BodyContent" runat="server">
                                     </asp:ContentPlaceHolder>
