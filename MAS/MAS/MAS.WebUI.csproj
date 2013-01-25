@@ -57,22 +57,149 @@
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="App_Data\AESKey.txt" />
+    <Content Include="FollowQuestion.aspx" />
+    <Content Include="Images\ajax-loader.gif" />
+    <Content Include="Images\arrows-ffffff.png" />
+    <Content Include="Images\ban-bot1.gif" />
+    <Content Include="Images\ban-bot2.gif" />
+    <Content Include="Images\ban-bot3.gif" />
+    <Content Include="Images\ban-bot4.gif" />
+    <Content Include="Images\ban-bot5.gif" />
+    <Content Include="Images\ban-tail1.gif" />
+    <Content Include="Images\ban-tail2.gif" />
+    <Content Include="Images\ban-tail3.gif" />
+    <Content Include="Images\ban-tail4.gif" />
+    <Content Include="Images\ban-tail5.gif" />
+    <Content Include="Images\ban-top1.gif" />
+    <Content Include="Images\ban-top2.gif" />
+    <Content Include="Images\ban-top3.gif" />
+    <Content Include="Images\ban-top4.gif" />
+    <Content Include="Images\ban-top5.gif" />
+    <Content Include="Images\body-bg.png" />
+    <Content Include="Images\border-left.gif" />
+    <Content Include="Images\bull.gif" />
+    <Content Include="Images\button-bg1.png" />
+    <Content Include="Images\button-bg2.png" />
+    <Content Include="Images\button-bg3.png" />
+    <Content Include="Images\button-bg4.png" />
+    <Content Include="Images\button-bg5.png" />
     <Content Include="Images\close_pop.png" />
-    <Content Include="PatientProfile.aspx" />
+    <Content Include="Images\direction_nav.png" />
+    <Content Include="Images\divider.gif" />
+    <Content Include="Images\empty_ad.jpg" />
+    <Content Include="Images\img-border.png" />
+    <Content Include="Images\img-border1.png" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\magnify.png" />
+    <Content Include="Images\main-box-bot.png" />
+    <Content Include="Images\main-box-extra-bot.gif" />
+    <Content Include="Images\main-box-tail.gif" />
+    <Content Include="Images\main-box-top.png" />
+    <Content Include="Images\nav-arrow.gif" />
+    <Content Include="Images\nav-divider.gif" />
+    <Content Include="Images\nivo-pagination.png" />
+    <Content Include="Images\page-image01.jpg" />
+    <Content Include="Images\partners\partner-logo1.png" />
+    <Content Include="Images\partners\partner-logo2.png" />
+    <Content Include="Images\partners\partner-logo3.png" />
+    <Content Include="Images\partners\partner-logo4.png" />
+    <Content Include="Images\partners\partner-logo5.png" />
+    <Content Include="Images\portfolio\folio01.jpg" />
+    <Content Include="Images\portfolio\folio02.jpg" />
+    <Content Include="Images\portfolio\folio03.jpg" />
+    <Content Include="Images\portfolio\folio04.jpg" />
+    <Content Include="Images\portfolio\folio05.jpg" />
+    <Content Include="Images\portfolio\folio06.jpg" />
+    <Content Include="Images\portfolio\folio07.jpg" />
+    <Content Include="Images\portfolio\folio08.jpg" />
+    <Content Include="Images\portfolio\folio09.jpg" />
+    <Content Include="Images\portfolio\folio10.jpg" />
+    <Content Include="Images\portfolio\folio11.jpg" />
+    <Content Include="Images\portfolio\folio12.jpg" />
+    <Content Include="Images\portfolio\folio13.jpg" />
+    <Content Include="Images\portfolio\folio14.jpg" />
+    <Content Include="Images\post-image01.jpg" />
+    <Content Include="Images\post-image02.jpg" />
+    <Content Include="Images\post-image03.jpg" />
+    <Content Include="Images\post-image04.jpg" />
+    <Content Include="Images\post-image05.jpg" />
+    <Content Include="Images\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="Images\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="Images\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="Images\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <Content Include="Images\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="Images\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="Images\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="Images\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="Images\prettyPhoto\dark_square\contentPattern.png" />
+    <Content Include="Images\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <Content Include="Images\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="Images\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="Images\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="Images\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="Images\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="Images\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="Images\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="Images\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="Images\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="Images\prettyPhoto\facebook\loader.gif" />
+    <Content Include="Images\prettyPhoto\facebook\sprite.png" />
+    <Content Include="Images\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="Images\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="Images\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <Content Include="Images\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="Images\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="Images\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="Images\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="Images\prettyPhoto\light_square\default_thumbnail.gif" />
+    <Content Include="Images\prettyPhoto\light_square\loader.gif" />
+    <Content Include="Images\prettyPhoto\light_square\sprite.png" />
+    <Content Include="Images\quotes.png" />
+    <Content Include="Images\request-image.jpg" />
+    <Content Include="Images\search-button.png" />
+    <Content Include="Images\search-text.png" />
+    <Content Include="Images\shadow.png" />
+    <Content Include="Images\slide01.jpg" />
+    <Content Include="Images\slide01_thumb.jpg" />
+    <Content Include="Images\slide02.jpg" />
+    <Content Include="Images\slide02_thumb.jpg" />
+    <Content Include="Images\slide03.jpg" />
+    <Content Include="Images\slide03_thumb.jpg" />
+    <Content Include="Images\slide04.jpg" />
+    <Content Include="Images\slide04_thumb.jpg" />
+    <Content Include="Images\slider-bottom.gif" />
+    <Content Include="Images\slider_img\slide01.jpg" />
+    <Content Include="Images\slider_img\slide02.jpg" />
+    <Content Include="Images\slider_img\slide03.jpg" />
+    <Content Include="Images\slider_img\slide04.jpg" />
+    <Content Include="Images\slider_img\slide05.jpg" />
+    <Content Include="Images\sub-menu-bot.png" />
+    <Content Include="Images\sub-menu-tail.gif" />
+    <Content Include="Images\sub-menu-top.png" />
+    <Content Include="Images\sub-menu-top1.png" />
+    <Content Include="Images\temp\logo.png" />
+    <Content Include="Index.aspx" />
+    <Content Include="NewQuestion.aspx" />
     <Content Include="PatientView.aspx" />
     <Content Include="PhysicianView.aspx" />
+    <Content Include="QuestionList.aspx" />
     <Content Include="Scripts\jquery-1.8.3-vsdoc.js" />
     <Content Include="Scripts\jquery-1.8.3.js" />
     <Content Include="Scripts\jquery-1.8.3.min.js" />
+    <Content Include="Scripts\jquery.nivo.slider.pack.js" />
     <Content Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\maxheight.js" />
     <Content Include="Scripts\RSA.js" />
     <Content Include="Scripts\RSA.min.js" />
+    <Content Include="Scripts\superfish.js" />
     <Content Include="Services\LoginService.asmx" />
     <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Styles\style.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -124,6 +251,13 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="FollowQuestion.aspx.cs">
+      <DependentUpon>FollowQuestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FollowQuestion.aspx.designer.cs">
+      <DependentUpon>FollowQuestion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -133,6 +267,27 @@
     </Compile>
     <Compile Include="PatientProfile.aspx.designer.cs">
       <DependentUpon>PatientProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="NewQuestion.aspx.cs">
+      <DependentUpon>NewQuestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewQuestion.aspx.designer.cs">
+      <DependentUpon>NewQuestion.aspx</DependentUpon>
     </Compile>
     <Compile Include="PatientView.aspx.cs">
       <DependentUpon>PatientView.aspx</DependentUpon>
@@ -149,6 +304,13 @@
       <DependentUpon>PhysicianView.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuestionList.aspx.cs">
+      <DependentUpon>QuestionList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuestionList.aspx.designer.cs">
+      <DependentUpon>QuestionList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Services\LoginService.asmx.cs">
       <DependentUpon>LoginService.asmx</DependentUpon>
       <SubType>Component</SubType>
@@ -163,7 +325,9 @@
     <Compile Include="Utility\ActionValidator.cs" />
     <Compile Include="Utility\LoginInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="MasterPage.Master" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Web.config" />
     <Content Include="Site.Master" />
