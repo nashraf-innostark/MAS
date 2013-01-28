@@ -77,18 +77,26 @@ namespace MAS.DAL
                 {
                     SqlDataReader drUser = cmdVerfiyCredentials.ExecuteReader();
 
-                    if (drUser.HasRows == true)
+                    if (drUser.HasRows)
                     {
                         while (drUser.Read())
                         {
                             result.UserId = Convert.ToInt32(drUser["UserId"]);
-                            result.UserName = Convert.ToString(drUser["UserName"]);
+                            result.Email = Convert.ToString(drUser["Email"]);
+                            result.City = Convert.ToString(drUser["City"]);
+                            result.Country = Convert.ToString(drUser["Country"]);
+                            result.ZipCode = Convert.ToString(drUser["ZipCode"]);
                             result.UserPassword = Convert.ToString(drUser["UserPassword"]);
-                            result.RoleId = Convert.ToInt32(drUser["RoleId"]);
+                            result.Address = Convert.ToString(drUser["Address"]);
                             result.FirstName = Convert.ToString(drUser["FirstName"]);
                             result.LastName = Convert.ToString(drUser["LastName"]);
+                            result.Other = Convert.ToString(drUser["Other"]);
+                            result.PhoneHome = Convert.ToString(drUser["PhoneHome"]);
+                            result.PhoneOffice = Convert.ToString(drUser["PhoneOffice"]);
+                            result.MaritalStatus = Convert.ToInt16(drUser["MaritalStatus"]);
+                            result.Gender = Convert.ToInt16(drUser["Gender"]);
                             result.SocialSecurityNo = Convert.ToString(drUser["SocialSecurityNo"]);
-                            result.RoleKey = Convert.ToInt16(drUser["RoleKey"]);
+                            result.DOB = Convert.ToDateTime(drUser["DOB"]);
                         }
                     }
                 }

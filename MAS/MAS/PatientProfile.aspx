@@ -55,7 +55,11 @@
     <asp:TextBox runat="server" ID="txtDOB"></asp:TextBox>
     
     <asp:Label runat="server" ID="lblPassword" Text="Password"></asp:Label>
-    <asp:TextBox runat="server" ID="txtPassword"></asp:TextBox>
+    <asp:TextBox runat="server" ID="txtPassword" TextMode="Password"></asp:TextBox>
     
+    <asp:Label runat="server" ID="lblPasswordConfirm" Text="Confirm Password"></asp:Label>
+    <asp:TextBox runat="server" ID="txtPasswordConfirm" TextMode="Password"></asp:TextBox>
+    
+
     <asp:Button runat="server" ID="btnSave" OnClick="BtnSaveClick"/>
 </asp:Content>

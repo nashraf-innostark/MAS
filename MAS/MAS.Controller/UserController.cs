@@ -14,9 +14,10 @@
             return new UserDal().VerifyCredentials(userName, password);
         }
 
-        public User ValidateSsn(string ssn)
+        public User ValidateSsn(string ssn,int id)
         {
-            return new UserDal().ValidateSsn(ssn);
+            User user= new UserDal().ValidateSsn(ssn);
+            return user.UserId == id ? null : user;
         }
 
         public User InsertOrUpdateUser(User user)

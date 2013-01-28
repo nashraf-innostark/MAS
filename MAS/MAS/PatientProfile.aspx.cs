@@ -17,7 +17,12 @@ namespace MAS
         IFormatProvider frmt = new System.Globalization.CultureInfo("en-us", true);
         private bool ValidateValues()
         {
-            User ini = new UserController().ValidateSsn(txtSSN.Text);
+            int id = 0;
+            if (!string.IsNullOrEmpty(Request.QueryString["Id"]))
+            {
+                id = Convert.ToInt32(Request.QueryString["Id"]);
+            }
+            User ini = new UserController().ValidateSsn(txtSSN.Text,id);
             return ini == null;
         }
 
@@ -70,8 +75,9 @@ namespace MAS
             txtSSN.Text = patient.SocialSecurityNo;
             txtOther.Text = patient.Other;
             txtPassword.Text = patient.UserPassword;
+            txtPasswordConfirm.Text = patient.UserPassword;
             txtDOB.Text= patient.DOB.ToString("dd/MM/yyyy");
-            patient.Email = txtEmail.Text;
+            txtEmail.Text = patient.Email;
         }
         #endregion
 
