@@ -13,5 +13,21 @@
         {
             return new UserDal().VerifyCredentials(userName, password);
         }
+
+        public User ValidateSsn(string ssn,int id)
+        {
+            User user= new UserDal().ValidateSsn(ssn);
+            return user.UserId == id ? null : user;
+        }
+
+        public User InsertOrUpdateUser(User user)
+        {
+            return  new UserDal().InsertOrUpdateUser(user);
+        }
+
+        public User GetUserById(int id)
+        {
+            return new UserDal().GetUserById(id);
+        }
     }
 }

@@ -32,6 +32,7 @@ namespace MAS
         protected void btnAddNew_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/NewQuestion.aspx");
+
         }
     }
 }

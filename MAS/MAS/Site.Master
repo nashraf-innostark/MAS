@@ -207,10 +207,7 @@ label.error { float: none; color: red; padding-left: .5em; vertical-align: top; 
                 error: OnErrorLogin
             });
         }
-        function OnSuccessLogin(data, status) {
-
-            
-        }
+       
         function OnErrorLogin(request, status, error) {
             $('.FailureText div').text('There is an error in aythenticating process');
         }

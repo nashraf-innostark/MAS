@@ -25,6 +25,7 @@ namespace MAS
         protected void btnSend_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/QuestionList.aspx");
+
         }
     }
 }
