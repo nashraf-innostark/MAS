@@ -163,8 +163,7 @@ label.error { float: none; color: red; padding-left: .5em; vertical-align: top; 
                             <div id="mastercontent">
                                 <div class="inside">
                                     <div class="pagetitle">
-                                        <asp:Label runat="server" ID="lblpageheader" Text="Page Title"></asp:Label>
-                                        <asp:Label runat="server" ID="lblpageTitle" Text="Page Title"></asp:Label>
+                                        <asp:Label runat="server" ID="lblpageheader" Text=""></asp:Label>
                                     </div>
                                     <asp:ContentPlaceHolder ID="BodyContent" runat="server">
                                     </asp:ContentPlaceHolder>
