@@ -181,6 +181,7 @@
     <Content Include="Images\temp\logo.png" />
     <Content Include="Index.aspx" />
     <Content Include="NewQuestion.aspx" />
+    <Content Include="PatientProfile.aspx" />
     <Content Include="PatientView.aspx" />
     <Content Include="PhysicianView.aspx" />
     <Content Include="QuestionList.aspx" />
@@ -261,13 +262,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="PatientProfile.aspx.cs">
-      <DependentUpon>PatientProfile.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PatientProfile.aspx.designer.cs">
-      <DependentUpon>PatientProfile.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -288,6 +282,13 @@
     </Compile>
     <Compile Include="NewQuestion.aspx.designer.cs">
       <DependentUpon>NewQuestion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PatientProfile.aspx.cs">
+      <DependentUpon>PatientProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PatientProfile.aspx.designer.cs">
+      <DependentUpon>PatientProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="PatientView.aspx.cs">
       <DependentUpon>PatientView.aspx</DependentUpon>
