@@ -1,4 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="NewQuestion.aspx.cs" Inherits="MAS.NewQuestion" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true"
+    CodeBehind="NewQuestion.aspx.cs" Inherits="MAS.NewQuestion" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="BodyContent" runat="server">
@@ -23,7 +25,7 @@
     </div>
     <div class="padding10" style="padding-right:205px;">
         <asp:Button ID="btnCancel" CssClass="btnstyle floatright" runat="server" Text="Cancel"
-            OnClick="btnCancel_Click" />
+            OnClick="btnCancel_Click" CausesValidation="false" />
         <asp:Button ID="btnSend" CssClass="btnstyle floatright" runat="server" 
             Text="Send" onclick="btnSend_Click" />
     </div>

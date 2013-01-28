@@ -8,11 +8,10 @@
 //------------------------------------------------------------------------------
 
 namespace MAS {
-
-
-    public partial class QuestionList
-    {
-
+    
+    
+    public partial class QuestionList {
+        
         /// <summary>
         /// btnAddNew control.
         /// </summary>
@@ -21,7 +20,7 @@ namespace MAS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAddNew;
-
+        
         /// <summary>
         /// gvQuestions control.
         /// </summary>
@@ -31,6 +30,4 @@ namespace MAS {
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView gvQuestions;
     }
-
-
 }

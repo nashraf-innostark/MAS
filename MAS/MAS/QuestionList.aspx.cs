@@ -25,6 +25,10 @@ namespace MAS
             string[] temp1 = { "2", "Sample Question 1", "12 Jan 2013" };
             list.Add(temp);
             list.Add(temp1);
+            list.Add(temp);
+            list.Add(temp1);
+            list.Add(temp);
+            list.Add(temp1);
             gvQuestions.DataSource = list;
             gvQuestions.DataBind();
         }
@@ -32,7 +36,6 @@ namespace MAS
         protected void btnAddNew_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/NewQuestion.aspx");
-
         }
     }
 }
