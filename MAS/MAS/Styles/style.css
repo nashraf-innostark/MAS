@@ -2219,7 +2219,7 @@ form#loginForm p, form#loginForm span {
 } 
 
 form#loginForm .textbox input { 
-	background:#666666; 
+	background:#666666;border: 1px solid red;
 	border-bottom:1px solid #333;
 	border-left:1px solid #000;
 	border-right:1px solid #333;

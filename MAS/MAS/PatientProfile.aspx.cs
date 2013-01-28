@@ -85,6 +85,11 @@ namespace MAS
         {
             if (!IsPostBack)
             {
+                if (Master != null)
+                {
+                    Label pageTitle = Master.FindControl("lblpageheader") as Label;
+                    if (pageTitle != null) pageTitle.Text = "Patient Profile";
+                }
                 if (!string.IsNullOrEmpty(Request.QueryString["Id"]))
                 {
                     int id = Convert.ToInt32(Request.QueryString["Id"]);
